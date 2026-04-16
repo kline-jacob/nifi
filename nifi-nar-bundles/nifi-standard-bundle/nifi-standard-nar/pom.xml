@@ -25,19 +25,7 @@
     <properties>
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <source.skip>true</source.skip>
-        <nar.classifier>mysql</nar.classifier>
     </properties>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.nifi</groupId>
-                <artifactId>nifi-nar-maven-plugin</artifactId>
-                <configuration>
-                    <classifier>${nar.classifier}</classifier>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     <dependencies>
         <dependency>
             <groupId>org.apache.nifi</groupId>
@@ -62,10 +50,6 @@
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-jolt-transform-json-ui</artifactId>
             <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 </project>
